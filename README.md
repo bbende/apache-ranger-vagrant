@@ -1,6 +1,8 @@
 # apache-ranger-vagrant
 
-Deploys Apache Ranger in a Vagrant VM using the Ranger artifacts built from source.
+Provisions a CentOS7 VM, installs JDK8, MariaDB/MySQL, and installs Apache Ranger Admin Webapp.
+
+## Setup
 
 1. Install VirtualBox
 
@@ -52,3 +54,23 @@ Deploys Apache Ranger in a Vagrant VM using the Ranger artifacts built from sour
 9. Destroy the VM when Done
 
         ./scripts/destroy.vm
+
+## Redeploy Admin WebApp
+
+To deploy the latest admin webapp while the VM is already running:
+
+        ./scripts/redeploy.sh
+
+## Troubleshooting
+
+To ssh on to the machine:
+
+        vagrant ssh
+
+Ranger Admin logs are located at:
+
+        sudo tail -n 200 -f /var/log/ranger/admin/catalina.out
+
+Ranger is installed under:
+
+        /vagrant/stage/ranger-<VERSION>-admin/
