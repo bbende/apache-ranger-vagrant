@@ -4,7 +4,7 @@ echo "Setting up Ranger..."
 SHARED_DIR=/vagrant
 cd $SHARED_DIR
 
-RANGER_ENV="$SHARED_DIR/ranger-env.sh"
+RANGER_ENV="$SHARED_DIR/scripts/ranger-env.sh"
 echo "Loading Ranger evnironment variables from $RANGER_ENV..."
 source $RANGER_ENV
 
