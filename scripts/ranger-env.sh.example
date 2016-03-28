@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Full path to location of Ranger source code
+RANGER_HOME=/home/myuser/incubator-ranger
+
+# Database passwords
+DB_ROOT_PASSWORD=password
+DB_PASSWORD=password
+AUDIT_DB_PASSWORD=password

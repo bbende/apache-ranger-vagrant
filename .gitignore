@@ -1,0 +1,4 @@
+.vagrant
+ranger-env.sh
+stage/*
+logfile
