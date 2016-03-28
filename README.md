@@ -2,6 +2,8 @@
 
 Provisions a CentOS7 VM, installs JDK8, MariaDB/MySQL, and installs Apache Ranger Admin Webapp.
 
+Requires having the Apache Ranger code cloned and built outside of this project.
+
 ## Setup
 
 1. Install VirtualBox
