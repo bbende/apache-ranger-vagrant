@@ -49,7 +49,7 @@ Provisions a CentOS7 VM, installs JDK8, MariaDB/MySQL, and installs Apache Range
         Mar 28, 2016 1:40:43 PM com.sun.jersey.api.core.ScanningResourceConfig logClasses
         INFO: Provider classes found:
 
-8. Navigate to [http://localhost:6080/index.html](http://localhost:6080/index.html) in your browser
+8. Navigate to [http://localhost:6080/index.html](http://localhost:6080/index.html) in your browser and login with admin/admin
 
 9. Destroy the VM when Done
 
