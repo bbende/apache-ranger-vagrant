@@ -14,8 +14,6 @@ else
           No ) exit;;
       esac
   done
-
-  rm -rf $STAGE_DIR/*
 fi
 
 # Copy the latest artifact to the stage directory and extract it

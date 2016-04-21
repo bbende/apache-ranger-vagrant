@@ -27,6 +27,9 @@ echo "export JAVA_HOME=/usr/lib/jvm/java" >> /root/.bashrc
 # Setup Ranger
 /vagrant/scripts/setup-ranger.sh
 
+# Setup Solr for Ranger
+/vagrant/scripts/setup-solr.sh
+
 echo "Starting Ranger Admin..."
 ranger-admin start
 

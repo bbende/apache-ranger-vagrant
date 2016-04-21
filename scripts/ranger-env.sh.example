@@ -7,3 +7,8 @@ RANGER_HOME=/home/myuser/incubator-ranger
 DB_ROOT_PASSWORD=password
 DB_PASSWORD=password
 AUDIT_DB_PASSWORD=password
+
+INSTALL_SOLR=false
+SOLR_TAR=/home/myuser/downloads/solr-5.2.1.tgz
+SOLR_INSTALL_DIR=/opt
+AUDIT_SOLR_URLS=http://localhost:6083/solr/ranger_audits

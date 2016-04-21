@@ -29,8 +29,8 @@ fi
 
 STAGE_DIR="$CURR_DIR/../stage"
 
-echo "Removing old artifact $STAGE_DIR/ranger-*-admin.tar.gz..."
-rm $STAGE_DIR/ranger-*-admin.tar.gz
+echo "Removing old artifact $STAGE_DIR/ranger-* ..."
+rm -rf $STAGE_DIR/ranger-*
 
 echo "Copying $LATEST_TAR to $STAGE_DIR..."
 cp $LATEST_TAR $STAGE_DIR/
@@ -38,3 +38,19 @@ cp $LATEST_TAR $STAGE_DIR/
 STAGED_TAR=`ls -t $STAGE_DIR/ranger-*-admin.tar.gz | head -1`
 echo "Extracting $STAGED_TAR..."
 tar xzf $STAGED_TAR -C $STAGE_DIR
+
+# Stage the solr tar if install solr is set to true
+if [ "$INSTALL_SOLR" == "true" ]; then
+  echo "Removing old Solr artifacts..."
+  rm -rf $STAGE_DIR/solr*
+  rm -rf $SOLR_INSTALL_DIR/solr*
+
+  echo "Copying $SOLR_TAR to $STAGE_DIR"
+  cp $SOLR_TAR $STAGE_DIR
+
+  STAGED_SOLR_TAR=`ls -t $STAGE_DIR/solr*.tgz | head -1`
+  echo "Extracting $STAGED_SOLR_TAR to $STAGE_DIR..."
+  tar xzf $STAGED_SOLR_TAR -C $STAGE_DIR
+fi
+
+echo "Done staging artifacts!"

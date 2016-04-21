@@ -25,6 +25,8 @@ Requires having the Apache Ranger code cloned and built outside of this project.
 
 5. Edit scripts/ranger-env.sh and set RANGER_HOME to point the root of range source code (requires having previously performed a full build with artifacts in RANGER_HOME/target).
 
+(Optional) If you want to install Solr to use for Ranger auditing, first download the [Solr 5.2.1](http://archive.apache.org/dist/lucene/solr/5.2.1/) tgz to your local computer, then edit ranger-env.sh and set INSTALL_SOLR=true and set SOLR_TAR to the full path to solr-5.2.1.tgz.
+
 6. Launch the VM
 
         ./scripts/up.sh
@@ -76,3 +78,11 @@ Ranger Admin logs are located at:
 Ranger is installed under:
 
         /vagrant/stage/ranger-<VERSION>-admin/
+
+Solr runs on port 6083 and should be accessible outside the VM at:
+
+        http://localhost:6083/solr
+
+Solr logs are located at:
+
+      sudo tail -n 200 -f /var/log/solr/ranger_audits/solr.log
