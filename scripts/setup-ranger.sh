@@ -16,6 +16,7 @@ sed -i '\|^db_root_password=| s|$|'${DB_ROOT_PASSWORD}'|g' ${INSTALL_PROPERTIES_
 sed -i '\|^db_password=| s|$|'${DB_PASSWORD}'|g' ${INSTALL_PROPERTIES_FILE}
 sed -i '\|^audit_db_password=| s|$|'${AUDIT_DB_PASSWORD}'|g' ${INSTALL_PROPERTIES_FILE}
 sed -i '\|^audit_solr_urls=| s|$|'${AUDIT_SOLR_URLS}'|g' ${INSTALL_PROPERTIES_FILE}
+sed -i '\|^policymgr_supportedcomponents=| s|$|'${SUPPORTED_COMPONENTS}'|g' ${INSTALL_PROPERTIES_FILE}
 
 RANGER_DIR=`ls -t $STAGE_DIR | grep ranger | grep admin | head -1`
 FULL_RANGER_DIR="$STAGE_DIR/$RANGER_DIR"
