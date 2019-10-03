@@ -23,6 +23,7 @@ FULL_RANGER_DIR="$STAGE_DIR/$RANGER_DIR"
 cd $FULL_RANGER_DIR
 
 echo "Running Ranger setup script from $FULL_RANGER_DIR..."
+python dba_script.py -q
 ./setup.sh
 ./set_globals.sh
 ./setup.sh
