@@ -12,4 +12,4 @@ INSTALL_SOLR=false
 SOLR_TAR=/home/myuser/downloads/solr-5.2.1.tgz
 SOLR_INSTALL_DIR=/opt
 AUDIT_SOLR_URLS=http://localhost:6083/solr/ranger_audits
-SUPPORTED_COMPONENTS=tag,hdfs,hbase,hive,kms,knox,storm,yarn,kafka,solr,atlas,nifi
+SUPPORTED_COMPONENTS=tag,hdfs,hbase,hive,kms,knox,storm,yarn,kafka,solr,atlas,nifi,nifi-registry

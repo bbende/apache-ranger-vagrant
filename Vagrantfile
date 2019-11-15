@@ -9,6 +9,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "scripts/bootstrap.sh"
   config.vm.network "forwarded_port", guest: 6080, host: 6080, auto_correct: true
   config.vm.network "forwarded_port", guest: 6083, host: 6083, auto_correct: true
+  config.vm.network "forwarded_port", guest: 6182, host: 6182, auto_correct: true
   config.vm.network "forwarded_port", guest: 9080, host: 9080, auto_correct: true
   config.vm.network "forwarded_port", guest: 9443, host: 9443, auto_correct: true
   config.vm.network "forwarded_port", guest: 9448, host: 9448, auto_correct: true
